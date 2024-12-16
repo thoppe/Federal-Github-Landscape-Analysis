@@ -1,40 +1,11 @@
 from dspipe import Pipe
 import requests
 import pandas as pd
-import os
 import time
-import itertools
+from common import tokens, headers, check_remaining
 
 #########################################################################
-
-headers = {
-    "Accept": "application/vnd.github+json",
-    "X-GitHub-Api-Version": "2022-11-28",
-}
-
-time_between_API_calls = 0.00
-ENV_tokens = ["GITHUB_TOKEN3", "GITHUB_TOKEN", "GITHUB_TOKEN2"]
-
-tokens = []
-for key in ENV_tokens:
-    val = os.environ.get(key)
-    if not val:
-        print(f"Error: {val} environment variable is not set.")
-    tokens.append(val)
-tokens = itertools.cycle(tokens)
-
-#########################################################################
-
-
-def check_remaining(response):
-    reset_time = int(response.headers.get("X-RateLimit-Reset", time.time() + 60))
-    sleep_seconds = max(reset_time - int(time.time()), 0)
-    remaining_requests = response.headers.get("X-RateLimit-Remaining")
-
-    print(f"Remaining requests {remaining_requests}, time left {sleep_seconds}")
-    return sleep_seconds
-
-
+time_between_API_calls = 0.10
 #########################################################################
 
 drop_keys = [
