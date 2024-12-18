@@ -125,13 +125,20 @@ def get_org_repos(org_name, f1):
     return df
 
 
-f_data = "data/raw_extracted_govs.csv"
+f_data = "data/US_curated_govs.csv"
 df = pd.read_csv(f_data)
 
+# Data quality checks
+assert (df["base_id"] == df["id"]).all()
+assert (df["base_html_url"] == df["html_url"]).all()
+
+df = df[df["CURATION"] == "FEDERAL"]
 df["orgname"] = df["html_url"].str.strip("/").str.split("/").str[-1]
+
 P = Pipe(df["orgname"], "data/organizations_repolist", output_suffix=".csv")
 P(get_org_repos, 1)
 
+# Example code
 # organization = "WhiteHouse"
 # df = get_org_repos(organization)
 # df.to_csv("demo.csv")
