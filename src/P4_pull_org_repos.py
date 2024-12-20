@@ -5,7 +5,7 @@ import time
 from common import tokens, headers, check_remaining
 
 #########################################################################
-time_between_API_calls = 0.10
+time_between_API_calls = 0.00
 #########################################################################
 
 drop_keys = [
@@ -136,7 +136,7 @@ df = df[df["CURATION"] == "FEDERAL"]
 df["orgname"] = df["html_url"].str.strip("/").str.split("/").str[-1]
 
 P = Pipe(df["orgname"], "data/organizations_repolist", output_suffix=".csv")
-P(get_org_repos, 1)
+P(get_org_repos, 2)
 
 # Example code
 # organization = "WhiteHouse"

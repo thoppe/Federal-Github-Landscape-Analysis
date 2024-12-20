@@ -3,10 +3,11 @@ import time
 import base64
 from dspipe import Pipe
 from pathlib import Path
+import pandas as pd
 from common import tokens, headers, check_remaining
 
 #########################################################################
-time_between_API_calls = 0.20
+time_between_API_calls = 0.10
 #########################################################################
 
 
@@ -41,9 +42,14 @@ def compute(repo_string):
         check_remaining(response)
         return None
 
-    check_remaining(response)
+    elif response.status_code == 404:
+        with open(f1, "w") as FOUT:
+            FOUT.write("404")
+        print("** MISSING **", repo_string)
+        return None
 
     js = response.json()
+
     assert js["encoding"] == "base64"
 
     decoded_content = base64.b64decode(js["content"]).decode("utf-8")
@@ -52,13 +58,22 @@ def compute(repo_string):
         FOUT.write(decoded_content)
 
     print(decoded_content[:500])
+    check_remaining(response)
 
 
-repo_string = "GSA/project-open-data-dashboard"
-ITR = [
-    repo_string,
-]
-P = Pipe(ITR)(compute, 1)
+def process_organization(f0):
+    df = pd.read_csv(f0)
+    print(df["full_name"])
+    Pipe(df["full_name"])(compute, 1)
+
+
+P = Pipe("data/organizations_repolist", input_suffix=".csv")(process_organization, 1)
+
+# repo_string = "GSA/project-open-data-dashboard"
+# ITR = [
+#    repo_string,
+# ]
+# P = Pipe(ITR)(compute, 1)
 
 # df["orgname"] = df["html_url"].str.strip("/").str.split("/").str[-1]
 # P = Pipe(df["orgname"], "data/organizations_repolist", output_suffix=".csv")
