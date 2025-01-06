@@ -1,33 +1,55 @@
-# Federal GitHub Landscape Analysis
+## Federal GitHub Landscape Analysis
 
-_Survey, Analyze, and report on all Federal GitHub Code_
+_Survey, analyze, and report on all Federal GitHub code_
 
-As of December 2024, there is no consolidated inventory of all U.S. Federal open-source code repositories. This project is an attempt to survey the Federal landscape of open-source code across GitHub.
+As of December 2024, there is no consolidated inventory of all U.S. Federal open-source code repositories. This project surveys all Federal open-source code across GitHub.
 
-## Methodology and Assumptions
+---
 
-With nearly 200 million users on GitHub, evaluating all accounts would be unfeasible.  
-Instead, we limit this project to _organizations_ that associate themselves with a .gov domain in their registration email or associated URL.  
-After sampling all 9 million organizations (as of **XXXX**), we identified **XXXX** organizations for human verification.  
-Of these, **XXXX** are associated with the U.S. Federal government.
+### Methodology and Assumptions
 
-This project does not cover repositories that are not on GitHub or not associated with a .gov organization.
+Given over 192.1 million GitHub users, evaluating every account is infeasible. Instead, this project focuses on _organizations_ that associate themselves with a `.gov` domain in their registered email or listed URL.
 
-Excluding clones, there are **XXXX** repositories in these organizations.
+There are 8,003,003 organizations listed on GitHub as of December 2024. Among them, 1,600 indicate a U.S.-based `.gov` domain in at least one of the following fields: `email`, `blog`, `description`, `company`, `location`, or `name`.
 
-## Project Description
+From these `.gov`-affiliated organizations with at least one repository, human review placed them into categories:
 
-Despite the increasing adoption of open-source practices, there is currently no centralized repository to manage and track source code produced by U.S. Federal agencies, including research projects, software, and website development (both front-end and back-end). Code.gov was launched to address this gap but has consistently fallen short of compliance and broader adoption. This project aims to build on the open-source movement by achieving three key objectives:
+| **Category**                  | **Count** |
+|-------------------------------|-----------|
+| US Federal                    | 775       |
+| US State or Local             | 293       |
+| Not Gov (false positive)      | 53        |
+| 404 (deleted by GitHub)       | 23        |
+| Tribal                        | 5         |
+| Hybrid-Gov Research Program   | 2         |
 
-+ Conduct a comprehensive survey of Federal open-source code hosted on GitHub by directly identifying relevant organizations.
-+ Analyze the ecosystem, including trends in programming language usage and collaboration networks.
-+ Archive Federal repositories to ensure their availability and continuity, especially in anticipation of potential disruptions during an administration change.
+Organizations were categorized by their primary ownership. If an organization was perceived as government-run or self-identified as such, it was included. The 404 errors likely resulted from phishing organizations set up to imitate a government agency (they often had very recent creation dates). Government research programs (e.g., [MoTrPAC](https://github.com/MoTrPAC)) were counted when a non-government lab or entity conducted a government-funded project.
 
-## Goals
+> **Note**: This project does not cover repositories hosted outside of GitHub or those not connected to a `.gov` organization.
 
-+ Host the archived data with a user-friendly front-end interface.
-+ Develop and publish a research report detailing the survey findings and ecosystem analysis.
+Within these 775 U.S. Federal organizations, there are 25,276 repositories in total. After excluding forks and repositories without at least one GitHub star or watcher (as indicators of influence), **12,468** repositories remained.
 
-## Current Progress
+**TO DO: OVERLAP WITH CODE.GOV**
 
-To date, all 9 million GitHub organizations have been assessed to identify Federal agency affiliations, with clear distinctions made for State, Local, and Tribal governments. Additionally, a shallow copy of the associated repositories has been initiated as part of the archiving effort.
+---
+
+### Project Description
+
+Despite growing adoption of open-source practices, there is no single, comprehensive hub for U.S. Federal agencies to manage and track source code—from research projects to software and web development. Code.gov was launched to fill this need but has faced challenges with compliance and broader adoption. This project aims to expand the open-source movement in government by:
+
+1. Conducting a comprehensive survey of Federal open-source code on GitHub through direct identification of relevant organizations.  
+2. Analyzing the ecosystem, including trends in programming languages and collaboration networks.  
+3. Archiving Federal repositories to ensure continued accessibility, especially in anticipation of potential disruptions during administrative transitions.
+
+---
+
+### Goals
+
+- Provide an archive of the data with a user-friendly front-end interface.  
+- Publish a research report detailing the survey findings and ecosystem analysis.
+
+---
+
+### Current Progress
+
+A shallow copy of identified repositories has begun as part of the archiving effort.

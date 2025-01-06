@@ -14,40 +14,49 @@ df = pd.read_csv("data/US_filtered_govs.csv").set_index("id")
 dx = pd.read_csv("data/US_curated_govs.csv").set_index("id")
 org = pd.read_csv("data/raw_extracted_govs.csv").set_index("id")
 df["CURATION"] = dx["CURATION"].fillna("uncurated")
+print(f"+ # Total number of .gov organizations {len(df)}")
+print(df["CURATION"].value_counts())
+# print(df.columns)
 
 totals = df.groupby("CURATION")["public_repos"].sum()
 totals /= totals.sum()
-print("Total fractions by organizations")
+print("Total fractions of orgs by repo count")
+print("(note this is skewed by global.gov false positives")
 print(totals.sort_values(ascending=False))
 # print(df.columns)
 
 # Keep only those curated as Federal
 df = df[df["CURATION"] == "FEDERAL"]
 known_federal_ids = set(df.index.tolist())
-#print(known_federal_ids)
+# print(known_federal_ids)
 print()
 print(f"+ # Federal GH orgs {len(df)}")
 
-repos = Pipe("data/organizations_repolist/", limit=None, input_suffix='.csv')(pd.read_csv, -1)
+repos = Pipe("data/organizations_repolist/", limit=None, input_suffix=".csv")(
+    pd.read_csv, -1
+)
 repos = pd.concat(repos)
 
 # Drop those without names
-repos = repos.dropna(subset=['name'])
+repos = repos.dropna(subset=["name"])
 
 print(f"+ # Federal GH repos {len(repos)}")
 
-repos = repos[repos['fork']==False]
+repos = repos[~repos["fork"]]
 print(f"+ # Federal GH repos [non-fork] {len(repos)}")
 
-repos['fame'] = repos['stargazers_count'] + repos['watchers_count']
-repos = repos[repos['fame']>=1]
+repos["fame"] = repos["stargazers_count"] + repos["watchers_count"]
+repos = repos[repos["fame"] >= 1]
 print(f"+ # Federal GH repos [non-fork, +1 fame] {len(repos)}")
 
-print(repos['size'].describe().apply(lambda x: format(x, '0.2f')))
-print(repos.columns)
+print("+ Repo size")
+print(repos["size"].describe().apply(lambda x: format(x, "0.2f")))
+# print(repos.columns)
+
+print("+ Repo fame (watchers+stars)")
+print(repos["fame"].describe().apply(lambda x: format(x, "0.2f")))
 
 exit()
-
 
 
 # Count the exact total number of organizations and their various stats
@@ -65,7 +74,7 @@ summation_columns = [
 
 
 def compute(f0):
-    df = pd.read_csv(f0).set_index('id')
+    df = pd.read_csv(f0).set_index("id")
 
     # Only keep the Federal IDs
     idx = df.index.isin(known_federal_ids)
