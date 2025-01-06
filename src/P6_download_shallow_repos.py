@@ -9,6 +9,7 @@ import shutil
 
 f_save = "data/repos_by_cumulative_popularity.csv"
 sleep_time = 2.5
+min_number_of_stars = 1
 
 """
 load_dest = "data/organizations_repolist"
@@ -52,7 +53,7 @@ five watchers and or stars.
 df = pd.read_csv(f_save)
 
 df = df[~df["fork"]]
-df = df[df["fame"] >= 2]
+df = df[df["fame"] >= min_number_of_stars]
 
 # print(df['size'].describe())
 total_bytes = int(df["size"].sum())
@@ -66,6 +67,11 @@ for url, branch in tqdm(zip(df["html_url"], df["default_branch"]), total=len(df)
     _, _, _, user, repo_name = url.split("/")
     dest = save_dest / user
     dest.mkdir(parents=True, exist_ok=True)
+
+    # This one came in through my personal API key, it's not public
+    # and it fails the public download.
+    if user == "cdcent":
+        continue
 
     f_save = dest / f"{repo_name}.tar.gz"
 
