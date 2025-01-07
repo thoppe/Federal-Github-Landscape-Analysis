@@ -45,16 +45,15 @@ print(f"+ # Federal GH repos {len(repos)}")
 repos = repos[~repos["fork"]]
 print(f"+ # Federal GH repos [non-fork] {len(repos)}")
 
-repos["fame"] = repos["stargazers_count"] + repos["watchers_count"]
-repos = repos[repos["fame"] >= 1]
-print(f"+ # Federal GH repos [non-fork, +1 fame] {len(repos)}")
+repos = repos[repos["stargazers_count"] >= 1]
+print(f"+ # Federal GH repos [non-fork, +1 stars] {len(repos)}")
 
 print("+ Repo size")
 print(repos["size"].describe().apply(lambda x: format(x, "0.2f")))
 # print(repos.columns)
 
-print("+ Repo fame (watchers+stars)")
-print(repos["fame"].describe().apply(lambda x: format(x, "0.2f")))
+print("+ Repo stars")
+print(repos["stargazers_count"].describe().apply(lambda x: format(x, "0.2f")))
 
 exit()
 
