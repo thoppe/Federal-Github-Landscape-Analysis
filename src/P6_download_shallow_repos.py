@@ -44,11 +44,12 @@ def download_file(url, output_path):
 
 
 """
-Now keep only a subset of repos that are not forks and have at least one star.
+Now keep only a subset of repos that are not forks and have at least
+five watchers and or stars.
 """
 
 df = pd.read_csv(f_save)
-
+df = df[df["stargazers_count"] > min_number_of_stars]
 df = df[~df["fork"]]
 
 # print(df['size'].describe())
