@@ -84,4 +84,37 @@ columns = [
 
 df = df[columns]
 df.to_csv(f_save)
-# print(df)
+
+
+"""
+Now create a CSV of all known organizations for reference.
+"""
+
+
+def compute(f0):
+    try:
+        df = pd.read_csv(f0)
+    except Exception:
+        # This is bad, likely a write-error, should delete and redownload
+        print(f"ERROR WITH {f0}")
+        return None
+
+    df = df[["id", "login", "public_repos", "followers"]]
+    df["public_repos"] = df["public_repos"].fillna(0).astype(int)
+    df["followers"] = df["followers"].fillna(0).astype(int)
+
+    return df
+
+
+data = []
+P = Pipe("data/organizations_info", limit=None)
+for row in P(compute, -1):
+    if row is None:
+        continue
+    data.append(row)
+
+df = pd.concat(data).sort_values("id").set_index("id")
+
+f_save = "data/raw_all_organizations.csv"
+df.to_csv(f_save)
+print(df)
