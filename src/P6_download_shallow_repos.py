@@ -49,7 +49,7 @@ five watchers and or stars.
 """
 
 df = pd.read_csv(f_save)
-df = df[df["stargazers_count"] > min_number_of_stars]
+df = df[df["stargazers_count"] >= min_number_of_stars]
 df = df[~df["fork"]]
 
 # print(df['size'].describe())
