@@ -6,18 +6,16 @@ from tqdm import tqdm
 import tempfile
 import requests
 import shutil
+from dspipe import Pipe
 
 f_save = "data/repos_by_cumulative_popularity.csv"
 sleep_time = 2.5
 min_number_of_stars = 1
 
-"""
 load_dest = "data/organizations_repolist"
 df = pd.concat(Pipe(load_dest, input_suffix=".csv")(pd.read_csv))
-df["fame"] = df["stargazers_count"]+ df["watchers_count"]
-df = df.sort_values("fame", ascending=False)
-df.to_csv(f_save, index = False)
-"""
+df = df.sort_values("stargazers_count", ascending=False)
+df.to_csv(f_save, index=False)
 
 
 def download_file(url, output_path):
@@ -46,14 +44,12 @@ def download_file(url, output_path):
 
 
 """
-Now keep only a subset of repos that are not forks and have at least
-five watchers and or stars.
+Now keep only a subset of repos that are not forks and have at least one star.
 """
 
 df = pd.read_csv(f_save)
 
 df = df[~df["fork"]]
-df = df[df["fame"] >= min_number_of_stars]
 
 # print(df['size'].describe())
 total_bytes = int(df["size"].sum())
