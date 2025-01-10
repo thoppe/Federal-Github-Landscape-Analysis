@@ -6,6 +6,13 @@ df = df[~df["fork"]]
 
 ##########################################################################
 
+df = df.groupby("language").value_counts()
+
+print(df[:20].to_string())
+exit()
+
+##########################################################################
+
 df[df["stargazers_count"] >= 1]
 df = df.sort_values("size", ascending=False)
 
