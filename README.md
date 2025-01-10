@@ -169,11 +169,61 @@ Within these repositories there were [27,382](src/data/users_by_repo_contributio
 
 <details>
 <summary>TBD: ✨ Total Programming Language Usage</summary>
+
+| Language                           | Unique Repo Count | Star Weighted Count |
+|------------------------------------|-------------------|----------------------|
+| Python                             | 4581              | 50607               |
+| JavaScript                         | 1462              | 35041               |
+| HTML                               | 1320              | 19240               |
+| C++                                | 1317              | 42808               |
+| Jupyter Notebook                   | 1294              | 10771               |
+| R                                  | 1161              | 4934                |
+| Java                               | 874               | 62392               |
+| Shell                              | 816               | 6988                |
+| C                                  | 622               | 16138               |
+| Ruby                               | 492               | 8821                |
+| CSS                                | 475               | 4313                |
+| TypeScript                         | 372               | 6298                |
+| Fortran                            | 368               | 4977                |
+| C#                                 | 268               | 1041                |
+| HCL                                | 242               | 847                 |
+| PHP                                | 218               | 2366                |
+| MATLAB                             | 183               | 1487                |
+| Julia                              | 154               | 3229                |
+| Go                                 | 135               | 1920                |
+| Perl                               | 112               | 840                 |
+| Dockerfile                         | 108               | 201                 |
+| TeX                                | 99                | 733                 |
+| Makefile                           | 75                | 264                 |
+| SCSS                               | 71                | 9857                |
+| CMake                              | 62                | 1128                |
+| XSLT                               | 57                | 1340                |
+| Clojure                            | 52                | 1340                |
+| Vue                                | 49                | 233                 |
+| Groovy                             | 38                | 548                 |
+| Rust                               | 36                | 191                 |
+| Roff                               | 35                | 339                 |
+| Objective-C                        | 35                | 820                 |
+| Matlab                             | 31                | 243                 |
+| Common Workflow Language           | 25                | 414                 |
+| TSQL                               | 24                | 1608                |
+| Nextflow                           | 22                | 186                 |
+| PowerShell                         | 21                | 3308                |
+| Cuda                               | 20                | 946                 |
+| SAS                                | 20                | 226                 |
+| Logos                              | 17                | 27                  |
+| Scala                              | 17                | 204                 |
+| Smarty                             | 16                | 20                  |
+| PostScript                         | 15                | 79                  |
+| Visual Basic                       | 15                | 11                  |
+| Stata                              | 15                | 27                  |
+| XQuery                             | 14                | 63                  |
+| Batchfile                          | 14                | 17                  |
+| Jinja                              | 14                | 24                  |
+| FORTRAN                            | 14                | 642                 |
+| PLpgSQL                            | 14                | 217                 |
 </details>
 
-<details>
-<summary>TBD: ✨ Programming Language Usage weighted by Stars </summary>
-</details>
 
 
 
