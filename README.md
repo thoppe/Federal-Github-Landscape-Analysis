@@ -44,7 +44,7 @@ Within these 775 U.S. Federal organizations, there are [25,276](src/data/repos_b
 ### Interesting findings
 
 <details>
-<summary>Top 20 repositories by stars</summary>
+<summary>🌟 Top 20 repositories by stars</summary>
 
 | Repository                                                                                       | Description                                                                                                              | Size    | Stars | Language   |
 |--------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|---------|-------|------------|
@@ -71,7 +71,7 @@ Within these 775 U.S. Federal organizations, there are [25,276](src/data/repos_b
 </details>
 
 <details>
-<summary>Top 10 repositories by size</summary>
+<summary>📦 Top 10 repositories by size</summary>
 
 | Repository                                                               | Description                                                                          | Size       | Stars | Language          |
 |--------------------------------------------------------------------------|--------------------------------------------------------------------------------------|------------|-------|-------------------|
@@ -89,13 +89,66 @@ Within these 775 U.S. Federal organizations, there are [25,276](src/data/repos_b
 
 
 <details>
-<summary>TBD: Top 20 users by total unique repo contributions</summary>
+<summary>🔧 Top 20 users by total unique repo contributions</summary>
+
+| Username                                               | Unique Repos | Total Contributions |
+|--------------------------------------------------------|--------------|----------------------|
+| [dependabot[bot]](https://github.com/dependabot)       | 1306         | 30723               |
+| [jsf9k](https://github.com/jsf9k/)                     | 310          | 69911               |
+| [felddy](https://github.com/felddy/)                   | 303          | 30348               |
+| [mcdonnnj](https://github.com/mcdonnnj/)               | 296          | 107597              |
+| [dav3r](https://github.com/dav3r/)                     | 293          | 14476               |
+| [hillaryj](https://github.com/hillaryj/)               | 276          | 1360                |
+| [jmorrowomni](https://github.com/jmorrowomni/)         | 240          | 3541                |
+| [jasonodoom](https://github.com/jasonodoom/)           | 233          | 6899                |
+| [arcsector](https://github.com/arcsector/)             | 231          | 248                 |
+| [michaelsaki](https://github.com/michaelsaki/)         | 198          | 6360                |
+| [afeld](https://github.com/afeld/)                     | 193          | 7654                |
+| [github-actions[bot]](https://github.com/github)       | 147          | 11437               |
+| [konklone](https://github.com/konklone/)               | 146          | 5505                |
+| [snyk-bot](https://github.com/snyk-bot/)               | 138          | 1097                |
+| [gbinal](https://github.com/gbinal/)                   | 135          | 6432                |
+| [adborden](https://github.com/adborden/)               | 119          | 3305                |
+| [mogul](https://github.com/mogul/)                     | 118          | 3121                |
+| [jmcarp](https://github.com/jmcarp/)                   | 96           | 5236                |
+| [apburnes](https://github.com/apburnes/)               | 94           | 1926                |
+| [wslack](https://github.com/wslack/)                   | 91           | 2302                |
+</details>
+
+
+<details>
+<summary>🔧 Top 20 users by total overall repo contributions</summary>
+| Username                                               | Unique Repos | Total Contributions |
+|--------------------------------------------------------|--------------|----------------------|
+| [actions-user](https://github.com/actions-user/)       | 38           | 369641              |
+| [mcdonnnj](https://github.com/mcdonnnj/)               | 296          | 107597              |
+| [lattner](https://github.com/lattner/)                 | 4            | 94479               |
+| [nrel-bot-3](https://github.com/nrel-bot-3/)           | 1            | 73117               |
+| [nrel-bot-2](https://github.com/nrel-bot-2/)           | 1            | 70656               |
+| [jsf9k](https://github.com/jsf9k/)                     | 310          | 69911               |
+| [nrel-bot](https://github.com/nrel-bot/)               | 1            | 53470               |
+| [matsapps](https://github.com/matsapps/)               | 1            | 32610               |
+| [dependabot[bot]](https://github.com/dependabot)       | 1306         | 30723               |
+| [nrel-bot-2b](https://github.com/nrel-bot-2b/)         | 1            | 30658               |
+| [nrel-bot-2c](https://github.com/nrel-bot-2c/)         | 1            | 30539               |
+| [felddy](https://github.com/felddy/)                   | 303          | 30348               |
+| [alchemistmatt](https://github.com/alchemistmatt/)     | 82           | 27713               |
+| [topperc](https://github.com/topperc/)                 | 3            | 25859               |
+| [RKSimon](https://github.com/RKSimon/)                 | 3            | 22505               |
+| [BarrySmith](https://github.com/BarrySmith/)           | 5            | 22006               |
+| [espindola](https://github.com/espindola/)             | 3            | 20191               |
+| [balay](https://github.com/balay/)                     | 6            | 19960               |
+| [tkremenek](https://github.com/tkremenek/)             | 3            | 18322               |
+| [shorowit](https://github.com/shorowit/)               | 15           | 17545               |
 </details>
 
 <details>
-<summary>TBD: Top 20 users by total unique repo stars</summary>
+<summary>TBD: ✨ Top 20 users by total unique repo stars</summary>
 </details>
 
+<details>
+<summary>TBD: ✨ Top 20 users by total overall repo stars</summary>
+</details>
 
 
 
@@ -105,4 +158,5 @@ Within these 775 U.S. Federal organizations, there are [25,276](src/data/repos_b
 
 - Finish the overlap analysis with CODE.GOV
 - Download all star-users
+- Analyze the programing languages (and another weighted by stars)
 - Find a place for a deep and shallow copies for archiving effort
