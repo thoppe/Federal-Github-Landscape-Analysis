@@ -40,7 +40,9 @@ Organizations were categorized by their primary ownership. If an organization wa
 
 Within these 775 U.S. Federal organizations, there are [25,276](src/data/repos_by_cumulative_popularity.csv) repositories in total. After excluding forks and repositories without at least one GitHub star or watcher (as indicators of influence), **12,468** repositories remained.
 
-### Top 20 repositories by stars)
+
+<details>
+<summary>Top 20 repositories by stars</summary>
 
 | Repository                                                                                       | Description                                                                                                              | Size    | Stars | Language   |
 |--------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|---------|-------|------------|
@@ -64,7 +66,7 @@ Within these 775 U.S. Federal organizations, there are [25,276](src/data/repos_b
 | [idaholab/moose](https://github.com/idaholab/moose)                                             | Multiphysics Object Oriented Simulation Environment                                                                     | 577167  | 1795  | C++        |
 | [NASA-AMMOS/3DTilesRendererJS](https://github.com/NASA-AMMOS/3DTilesRendererJS)                 | Renderer for 3D Tiles in Javascript using three.js                                                                      | 55389   | 1651  | JavaScript |
 | [cisagov/cset](https://github.com/cisagov/cset)                                                 | Cybersecurity Evaluation Tool                                                                                           | 2185716 | 1474  | TSQL       |
-
+</details>
 
 ### Top 10 repositories by reported size
 
