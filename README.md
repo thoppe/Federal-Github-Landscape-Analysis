@@ -168,7 +168,7 @@ Within these repositories there were [27,382](src/data/users_by_repo_contributio
 </details>
 
 <details>
-<summary>TBD: ✨ Total Programming Language Usage</summary>
+<summary>✨ Total Programming Language Usage</summary>
 
 | Language                           | Unique Repo Count | Star Weighted Count |
 |------------------------------------|-------------------|----------------------|
