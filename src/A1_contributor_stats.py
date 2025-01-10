@@ -44,7 +44,7 @@ for col in cx.columns:
         continue
     cx[col] = cx[col].astype(int)
 
-cx.to_csv(f_save)
+cx.to_csv(f_save, index=False)
 
 base_username = "https://github.com"
 cx["username"] = cx["username"].apply(lambda x: f"[{x}]({base_username}/{x}/)")

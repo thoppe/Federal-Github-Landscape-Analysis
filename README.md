@@ -23,7 +23,8 @@ There are 8,003,003 organizations\* listed on GitHub as of December 2024. Among 
 
 \* Compressed dataset of all [8,003,003](src/data/raw_all_organizations.csv.tar.bz2) organizations.
 
-These were human-curated and placed into categories:
+<details>
+<summary>Human-curated categories</summary>
 
 | **Category**                  | **Count** |
 |-------------------------------|-----------|
@@ -34,12 +35,15 @@ These were human-curated and placed into categories:
 | Tribal                        | 5         |
 | Hybrid-Gov Research Program   | 2         |
 
+</details>
+
 Organizations were categorized by their primary ownership. If an organization was perceived as government-run or self-identified as such, it was included. The 404 errors likely resulted from phishing organizations set up to imitate a government agency (they often had very recent creation dates). Government research programs (e.g., [MoTrPAC](https://github.com/MoTrPAC)) were counted when a non-government lab or entity conducted a government-funded project.
 
 > **Limitations**: This project does not cover repositories hosted outside of GitHub or those not connected to a `.gov` organization.
 
 Within these 775 U.S. Federal organizations, there are [25,276](src/data/repos_by_cumulative_popularity.csv) repositories in total. After excluding forks and repositories without at least one GitHub star or watcher (as indicators of influence), **12,468** repositories remained.
 
+Within these repositories there were [27,382](src/data/users_by_repo_contributions.csv) unique contributors. Some of these are clearly provisioned automated bots, while other indicate extremely prolific human users.
 
 ### Interesting findings
 
@@ -71,7 +75,8 @@ Within these 775 U.S. Federal organizations, there are [25,276](src/data/repos_b
 </details>
 
 <details>
-<summary>📦 Top 10 repositories by size</summary>
+<summary>📦 Top 20 repositories by size</summary>
+
 
 | Repository                                                               | Description                                                                          | Size       | Stars | Language          |
 |--------------------------------------------------------------------------|--------------------------------------------------------------------------------------|------------|-------|-------------------|
@@ -85,6 +90,7 @@ Within these 775 U.S. Federal organizations, there are [25,276](src/data/repos_b
 | [COVID19PVI/data](https://github.com/COVID19PVI/data)                    | This is the public data repository for the COVID-19 Pandemic Vulnerability Index (PVI) Dashboard. | 12367838   | 24    |                   |
 | [idaholab/repository-statistics](https://github.com/idaholab/repository-statistics) | Tracking repository statistics over time for projects on GitHub under IdahoLab, IdahoLabResearch and IdahoLabUnsupported. | 11804873   | 1     | HTML              |
 | [sPHENIX-Collaboration/QA-gallery](https://github.com/sPHENIX-Collaboration/QA-gallery) | Plotting macro and result gallery for standardized QA plots                          | 11319893   | 0     | C                 |
+
 </details>
 
 
@@ -118,6 +124,7 @@ Within these 775 U.S. Federal organizations, there are [25,276](src/data/repos_b
 
 <details>
 <summary>🔧 Top 20 users by total overall repo contributions</summary>
+
 | Username                                               | Unique Repos | Total Contributions |
 |--------------------------------------------------------|--------------|----------------------|
 | [actions-user](https://github.com/actions-user/)       | 38           | 369641              |
@@ -140,6 +147,7 @@ Within these 775 U.S. Federal organizations, there are [25,276](src/data/repos_b
 | [balay](https://github.com/balay/)                     | 6            | 19960               |
 | [tkremenek](https://github.com/tkremenek/)             | 3            | 18322               |
 | [shorowit](https://github.com/shorowit/)               | 15           | 17545               |
+
 </details>
 
 <details>
@@ -148,6 +156,14 @@ Within these 775 U.S. Federal organizations, there are [25,276](src/data/repos_b
 
 <details>
 <summary>TBD: ✨ Top 20 users by total overall repo stars</summary>
+</details>
+
+<details>
+<summary>TBD: ✨ Total Programming Language Usage</summary>
+</details>
+
+<details>
+<summary>TBD: ✨ Programming Language Usage weighted by Stars </summary>
 </details>
 
 
