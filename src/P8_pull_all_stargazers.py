@@ -13,6 +13,7 @@ df = df[~df["fork"]]
 drop_keys = [
     "avatar_url",
     "gravatar_id",
+    "node_id",
     "url",
     "html_url",
     "followers_url",
@@ -41,7 +42,7 @@ def get_repo_contributors(full_name, f2):
 
     org_name, repo_name = full_name.split("/")
 
-    url = f"https://api.github.com/repos/{org_name}/{repo_name}/contributors"
+    url = f"https://api.github.com/repos/{org_name}/{repo_name}/stargazers"
     contributors = []
     page = 1
 
@@ -107,6 +108,8 @@ def get_repo_contributors(full_name, f2):
         df.to_csv(f2, index=False)
 
 
-Pipe(df["full_name"], "data/repos/contributors", limit=None)(get_repo_contributors, 1)
+Pipe(df["full_name"], "data/repos/stargazers", limit=None, shuffle=True)(
+    get_repo_contributors, 1
+)
 
 # print(df.columns)
