@@ -68,9 +68,6 @@ def get_repo_contributors(full_name, f2):
             time.sleep(sleep_seconds)
             continue
 
-        # It's possible that we get this error, need to handle!
-        # {'message': 'In order to keep the API fast for everyone, pagination is limited for this resource.', 'documentation_url': 'https://docs.github.com/v3/#pagination', 'status': '422'}
-
         check_remaining(response)
 
         if not response.content:
@@ -80,6 +77,12 @@ def get_repo_contributors(full_name, f2):
             data = response.json()
 
         if "status" in data and data["status"] == "404":
+            break
+
+        # It's possible that we get this error, need to handle!
+        # {'message': 'In order to keep the API fast for everyone, pagination is limited for this resource.', 'documentation_url': 'https://docs.github.com/v3/#pagination', 'status': '422'}
+
+        if "status" in data and data["status"] == "422":
             break
 
         if not data:
@@ -111,7 +114,7 @@ def get_repo_contributors(full_name, f2):
         df.to_csv(f2, index=False)
 
 
-df = df[20:]
+# df = df[20:]
 
 Pipe(df["full_name"], "data/repos/stargazers", limit=None, shuffle=False)(
     get_repo_contributors, 1

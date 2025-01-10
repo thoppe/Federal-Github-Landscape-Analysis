@@ -160,11 +160,32 @@ Within these repositories there were [27,382](src/data/users_by_repo_contributio
 </details>
 
 <details>
-<summary>TBD: ✨ Top 20 users by total unique repo stars</summary>
-</details>
+<summary>✨ Top 20 users by stargazer count</summary>
 
-<details>
-<summary>TBD: ✨ Top 20 users by total overall repo stars</summary>
+
+| Username                                                                                   | Unique Starred Repos |
+|-------------------------------------------------------------------------------------------|-----------------------|
+| [nickfnblum](https://github.com/nickfnblum/)                                              | 909                   |
+| [culverit](https://github.com/culverit/)                                                  | 492                   |
+| [firebitsbr](https://github.com/firebitsbr/)                                              | 471                   |
+| [gaybro8777](https://github.com/gaybro8777/)                                              | 411                   |
+| [Ly0n](https://github.com/Ly0n/)                                                          | 390                   |
+| [andrewn6](https://github.com/andrewn6/)                                                  | 297                   |
+| [austinsonger](https://github.com/austinsonger/)                                          | 294                   |
+| [edx903](https://github.com/edx903/)                                                      | 233                   |
+| [JonReppDirectOneDesign](https://github.com/JonReppDirectOneDesign/)                      | 208                   |
+| [zbeekman](https://github.com/zbeekman/)                                                  | 198                   |
+| [Cheryl-Lach](https://github.com/Cheryl-Lach/)                                            | 195                   |
+| [pkestene](https://github.com/pkestene/)                                                  | 193                   |
+| [Citizen2028](https://github.com/Citizen2028/)                                            | 167                   |
+| [EW-RR](https://github.com/EW-RR/)                                                        | 165                   |
+| [JeffCarpenter](https://github.com/JeffCarpenter/)                                        | 159                   |
+| [Khanyisa-Ngejane](https://github.com/Khanyisa-Ngejane/)                                  | 146                   |
+| [JT5D](https://github.com/JT5D/)                                                          | 141                   |
+| [ce107](https://github.com/ce107/)                                                        | 139                   |
+| [adelevie](https://github.com/adelevie/)                                                  | 129                   |
+| [adborden](https://github.com/adborden/)                                                  | 127                   |
+
 </details>
 
 <details>
