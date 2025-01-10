@@ -41,6 +41,8 @@ Organizations were categorized by their primary ownership. If an organization wa
 Within these 775 U.S. Federal organizations, there are [25,276](src/data/repos_by_cumulative_popularity.csv) repositories in total. After excluding forks and repositories without at least one GitHub star or watcher (as indicators of influence), **12,468** repositories remained.
 
 
+### Interesting findings
+
 <details>
 <summary>Top 20 repositories by stars</summary>
 
@@ -68,7 +70,8 @@ Within these 775 U.S. Federal organizations, there are [25,276](src/data/repos_b
 | [cisagov/cset](https://github.com/cisagov/cset)                                                 | Cybersecurity Evaluation Tool                                                                                           | 2185716 | 1474  | TSQL       |
 </details>
 
-### Top 10 repositories by reported size
+<details>
+<summary>Top 10 repositories by size</summary>
 
 | Repository                                                               | Description                                                                          | Size       | Stars | Language          |
 |--------------------------------------------------------------------------|--------------------------------------------------------------------------------------|------------|-------|-------------------|
@@ -82,6 +85,18 @@ Within these 775 U.S. Federal organizations, there are [25,276](src/data/repos_b
 | [COVID19PVI/data](https://github.com/COVID19PVI/data)                    | This is the public data repository for the COVID-19 Pandemic Vulnerability Index (PVI) Dashboard. | 12367838   | 24    |                   |
 | [idaholab/repository-statistics](https://github.com/idaholab/repository-statistics) | Tracking repository statistics over time for projects on GitHub under IdahoLab, IdahoLabResearch and IdahoLabUnsupported. | 11804873   | 1     | HTML              |
 | [sPHENIX-Collaboration/QA-gallery](https://github.com/sPHENIX-Collaboration/QA-gallery) | Plotting macro and result gallery for standardized QA plots                          | 11319893   | 0     | C                 |
+</details>
+
+
+<details>
+<summary>TBD: Top 20 users by total unique repo contributions</summary>
+</details>
+
+<details>
+<summary>TBD: Top 20 users by total unique repo stars</summary>
+</details>
+
+
 
 
 ---
@@ -89,5 +104,5 @@ Within these 775 U.S. Federal organizations, there are [25,276](src/data/repos_b
 ### TO DO
 
 - Finish the overlap analysis with CODE.GOV
-- Download all contributors and star-users
+- Download all star-users
 - Find a place for a deep and shallow copies for archiving effort
