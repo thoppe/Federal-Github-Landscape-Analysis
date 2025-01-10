@@ -18,7 +18,7 @@ Despite growing adoption of open-source practices, there is no single, comprehen
 
 ### Methodology and Reporting
 
-Given over 192.1 million GitHub users, evaluating every account is infeasible. Instead, this project focuses on _organizations_ that associate themselves with a `.gov` domain in their registered email or listed URL.
+Given over 192.1 million GitHub users, evaluating every account is infeasible. Instead, this project focuses on organizations that associate themselves with a `.gov` domain in their registered email or listed URL.
 There are 8,003,003 organizations\* listed on GitHub as of December 2024. Among them [3,203](src/data/raw_extracted_govs.csv) organizations indicated a `.gov` domain in at least one of the following fields: `email`, `blog`, `description`, `company`, `location`, or `name`. From these [1,599](src/data/US_filtered_govs.csv) `.gov`-affiliated organizations that were US-based, [1,151](src/data/US_curated_govs.csv) organizations with at least one public repository remained.
 
 \* Compressed dataset of all [8,003,003](src/data/raw_all_organizations.csv.tar.bz2) organizations.
@@ -37,13 +37,13 @@ There are 8,003,003 organizations\* listed on GitHub as of December 2024. Among 
 
 </details>
 
-Organizations were categorized by their primary ownership. If an organization was perceived as government-run or self-identified as such, it was included. The 404 errors likely resulted from phishing organizations set up to imitate a government agency (they often had very recent creation dates). Government research programs (e.g., [MoTrPAC](https://github.com/MoTrPAC)) were counted when a non-government lab or entity conducted a government-funded project.
+Organizations were categorized by their primary ownership. If an organization was perceived as government-run or self-identified as such, it was included. The 404 errors likely resulted from phishing organizations set up to imitate a government agency (they often had very recent creation dates). Government research programs (e.g., [MoTrPAC](https://github.com/MoTrPAC)) were counted when it appeared that the governing entity was the US government.
 
 > **Limitations**: This project does not cover repositories hosted outside of GitHub or those not connected to a `.gov` organization.
 
-Within these 775 U.S. Federal organizations, there are [25,276](src/data/repos_by_cumulative_popularity.csv) repositories in total. After excluding forks and repositories without at least one GitHub star or watcher (as indicators of influence), **12,468** repositories remained.
+Within these 775 U.S. Federal organizations, there are [25,276](src/data/repos_by_cumulative_popularity.csv) repositories in total. After excluding forks and repositories without at least one GitHub star, **12,468** repositories remained.
 
-Within these repositories there were [27,382](src/data/users_by_repo_contributions.csv) unique contributors. Some of these are clearly provisioned automated bots, while other indicate extremely prolific human users.
+Within these repositories there were [27,382](src/data/users_by_repo_contributions.csv) unique contributors. Some of these are clearly provisioned automated bots, while others indicate extremely prolific human users.
 
 ### Interesting findings
 
@@ -132,7 +132,7 @@ Within these repositories there were [27,382](src/data/users_by_repo_contributio
 
 
 <details>
-<summary>🔧 Top 20 users by total overall repo contributions</summary>
+<summary>🚀 Top 20 users by total overall repo contributions</summary>
 
 | Username                                               | Unique Repos | Total Contributions |
 |--------------------------------------------------------|--------------|----------------------|
@@ -189,7 +189,7 @@ Within these repositories there were [27,382](src/data/users_by_repo_contributio
 </details>
 
 <details>
-<summary>✨ Total Programming Language Usage</summary>
+<summary>📈 Total Programming Language Usage</summary>
 
 | Language                           | Unique Repo Count | Star Weighted Count |
 |------------------------------------|-------------------|----------------------|
@@ -253,6 +253,10 @@ Within these repositories there were [27,382](src/data/users_by_repo_contributio
 ### TO DO
 
 - Finish the overlap analysis with CODE.GOV
-- Download all star-users
-- Analyze the programing languages (and another weighted by stars)
-- Find a place for a deep and shallow copies for archiving effort
+- Determine a location for deep and shallow copies to support the archiving effort.
+
+---
+
+### Prior work
+
+- TBD
