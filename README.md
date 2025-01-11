@@ -46,7 +46,7 @@ Within these 775 U.S. Federal organizations, there are [25,276](src/data/repos_b
 Within these repositories there were [27,382](src/data/users_by_repo_contributions.csv) unique contributors. Some of these are clearly provisioned automated bots, while others indicate extremely prolific human users.
 
 
-| Categories                                    | Cumulative Stars   |
+| Category                                    | Cumulative Stars   |
 |----------------------------------------------|---------|
 | 🌟 Open Source Software Development          | 232781  |
 | 🛡️ Cybersecurity and Threat Analysis         | 93242   |
@@ -60,10 +60,12 @@ Within these repositories there were [27,382](src/data/users_by_repo_contributio
 | 🧠 Artificial Intelligence and Machine Learning | 24069   |
 
 
+### Other interesting findings
+
 <details>
 <summary>Category counts by total repositories</summary>
 
-| Categories                                 | Total Repositories |
+| Category                                 | Total Repositories |
 |-------------------------------------------|----------|
 | 🌟 Open Source Software Development       | 7516     |
 | 📊 Data Integration and Analytics         | 4280     |
@@ -78,7 +80,7 @@ Within these repositories there were [27,382](src/data/users_by_repo_contributio
 
 </details>
 
-### Interesting findings
+
 
 <details>
 <summary>🌟 Top 20 repositories by stars</summary>
