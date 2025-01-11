@@ -246,6 +246,33 @@ Within these repositories there were [27,382](src/data/users_by_repo_contributio
 </details>
 
 
+| Index | Categories                                 | Fraction                                      |
+|-------|-------------------------------------------|----------------------------------------------|
+| 1     | Open Source Software Development          | 7516  ![](https://geps.dev/progress/60)      |
+| 2     | Data Integration and Analytics            | 4280  ![](https://geps.dev/progress/34)      |
+| 3     | High-Performance Computing and Simulation | 2082  ![](https://geps.dev/progress/17)      |
+| 4     | Environmental and Energy Applications     | 1854  ![](https://geps.dev/progress/15)      |
+| 5     | Geospatial and Earth Observation Technologies | 1738  ![](https://geps.dev/progress/14)  |
+| 6     | Web and Design Standards                  | 1679  ![](https://geps.dev/progress/13)      |
+| 7     | Artificial Intelligence and Machine Learning | 1379  ![](https://geps.dev/progress/11)  |
+| 8     | Cybersecurity and Threat Analysis         | 1050  ![](https://geps.dev/progress/8)       |
+| 9     | Embedded Systems and Robotics            | 663   ![](https://geps.dev/progress/5)       |
+| 10    | Space and Planetary Exploration Technologies | 446   ![](https://geps.dev/progress/4)   |
+
+| Categories                                    | Stars   | Fraction                                      |
+|----------------------------------------------|---------|----------------------------------------------|
+| Open Source Software Development             | 232781  | ![](https://geps.dev/progress/67)            |
+| Cybersecurity and Threat Analysis            | 93242   | ![](https://geps.dev/progress/27)            |
+| Data Integration and Analytics               | 66825   | ![](https://geps.dev/progress/19)            |
+| High-Performance Computing and Simulation    | 47508   | ![](https://geps.dev/progress/14)            |
+| Space and Planetary Exploration Technologies | 45059   | ![](https://geps.dev/progress/13)            |
+| Web and Design Standards                     | 42425   | ![](https://geps.dev/progress/12)            |
+| Embedded Systems and Robotics                | 36247   | ![](https://geps.dev/progress/10)            |
+| Geospatial and Earth Observation Technologies| 29900   | ![](https://geps.dev/progress/9)             |
+| Environmental and Energy Applications        | 24976   | ![](https://geps.dev/progress/7)             |
+| Artificial Intelligence and Machine Learning | 24069   | ![](https://geps.dev/progress/7)             |
+
+
 
 
 ---

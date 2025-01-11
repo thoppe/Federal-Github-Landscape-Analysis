@@ -1,5 +1,6 @@
 import requests
 import time
+import os
 import base64
 from dspipe import Pipe
 from pathlib import Path
@@ -18,6 +19,11 @@ def compute(repo_string):
     f1.parents[0].mkdir(exist_ok=True, parents=True)
 
     if f1.exists():
+        return
+
+    fx = Path("data/repos/readme_hold") / Path(org_name) / (repo_name + ".md")
+    if fx.exists():
+        os.system(f"cp {fx} {f1}")
         return
 
     url = f"https://api.github.com/repos/{org_name}/{repo_name}/readme"
@@ -61,13 +67,12 @@ def compute(repo_string):
     check_remaining(response)
 
 
-def process_organization(f0):
-    df = pd.read_csv(f0)
-    print(df["full_name"])
-    Pipe(df["full_name"])(compute, 1)
+f_repos = "data/repos_by_cumulative_popularity.csv"
+df = pd.read_csv(f_repos)
+df = df[~df["fork"]]
+df = df[df["stargazers_count"] >= 1]
 
-
-P = Pipe("data/organizations_repolist", input_suffix=".csv")(process_organization, 1)
+P = Pipe(df["full_name"].tolist())(compute, 1)
 
 # repo_string = "GSA/project-open-data-dashboard"
 # ITR = [
