@@ -45,6 +45,7 @@ Within these 775 U.S. Federal organizations, there are [25,276](src/data/repos_b
 
 Within these repositories there were [27,382](src/data/users_by_repo_contributions.csv) unique contributors. Some of these are clearly provisioned automated bots, while others indicate extremely prolific human users.
 
+Topics were determined by examining the top 1,500 repositories and then applied using a structured GPT query.
 
 | Category                                    | Cumulative Stars   |
 |----------------------------------------------|---------|
