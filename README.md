@@ -12,11 +12,14 @@
 
 ---
 
+
 ### Project Description
 
-As of December 2024, there is no consolidated inventory of all U.S. Federal open-source code repositories. This project surveys all Federal open-source code across GitHub.
+As of January 2025, there is no consolidated inventory of all U.S. Federal open-source code repositories. This project surveys all Federal open-source code across GitHub.
 
-Despite growing adoption of open-source practices, there is no single, comprehensive hub for U.S. Federal agencies to manage and track source code—from research projects to software and web development. [Code.gov](https://code.gov/) was launched to fill this need but has faced challenges with compliance and broader adoption. The [list](https://government.github.com/community/) maintained by GitHub itself better but mixes non-Federal organizations, and still lacks many of the smaller office or research arms within the government. This project aims to expand the open-source movement in government by:
+Despite growing adoption of open-source practices, there is no single, comprehensive hub for U.S. Federal agencies to manage and track source code—from research projects to software and web development. [Code.gov](https://code.gov/) was launched to address this need but has faced challenges with compliance and broader adoption. This [list maintained by GitHub](https://government.github.com/community/) offers better coverage but mixes in non-Federal organizations and omits many smaller offices or research arms within the government. 
+
+This project seeks to expand the open-source movement in government by:
 
 1. Conducting a comprehensive survey of Federal open-source code on GitHub through direct identification of relevant organizations.  
 2. Analyzing the ecosystem, including trends in programming languages and collaboration networks.  
