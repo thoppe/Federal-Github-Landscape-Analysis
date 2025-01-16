@@ -304,6 +304,10 @@ All repositories have been archived via a "shallow copy." Full data is available
 
 ---
 
-### Prior work
+### Other efforts
 
-- TBD
++ [Github Archive Program](https://archiveprogram.github.com/)
++ [Github logs of every API call / event](https://www.gharchive.org/)
++ [Software Heritage Archive](https://archive.softwareheritage.org/)
++ [Measuring Public Open-Source Software in the Federal Government: An Analysis of Code.gov](https://doi.org/10.6339/24-jds1148)
++ [M-16-21](https://obamawhitehouse.archives.gov/sites/default/files/omb/memoranda/2016/m_16_21.pdf) Federal Source Code Policy: Achieving Efficiency, Transparency, and Innovation through Reusable and Open Source Software
