@@ -1,14 +1,22 @@
 ## Federal GitHub Landscape Analysis
 
-_Survey, analyze, and report on all Federal GitHub code_
+### Key take-aways
 
-As of December 2024, there is no consolidated inventory of all U.S. Federal open-source code repositories. This project surveys all Federal open-source code across GitHub.
+- Open-source government innovation thrives in the U.S. Federal government, with at least 775 federal organizations hosting over 25,000 repositories.
+- Releasing code publicly increases transparency and trust in government operations, enabling a more participatory government. Over 189,000 unique users have left more than 322,000 stars (a community measure of approval).
+- A small subset of users has been critical to the Federal open-source ecosystem, individually contributing to hundreds—and, in some cases, nearly a thousand—different repositories. These top users have collectively pushed nearly half a million commits.
+- A full archival copy of the U.S. Federal GitHub is stored for archival and research purposes (as of January 4, 2025).
+- The open-source landscape is diverse but leans towards repositories focused on scientific and cybersecurity topics.
+- The most popular GitHub repository is the NSA's [Ghidra](https://github.com/NationalSecurityAgency/ghidra), a software reverse engineering framework. It ranks as the 188th most popular repository on all of GitHub.
+- Other notable repositories include NASA's [build-it-yourself Mars rover](https://github.com/nasa-jpl/open-source-rover), the [Public Sans font](https://github.com/uswds/public-sans), a [web design framework](https://github.com/uswds/uswds), Obama-era White House [API standards](https://github.com/WhiteHouse/api-standards), and the multiphysics object-oriented simulation environment ([MOOSE](https://github.com/idaholab/moose)).
 
 ---
 
 ### Project Description
 
-Despite growing adoption of open-source practices, there is no single, comprehensive hub for U.S. Federal agencies to manage and track source code—from research projects to software and web development. Code.gov was launched to fill this need but has faced challenges with compliance and broader adoption. This project aims to expand the open-source movement in government by:
+As of December 2024, there is no consolidated inventory of all U.S. Federal open-source code repositories. This project surveys all Federal open-source code across GitHub.
+
+Despite growing adoption of open-source practices, there is no single, comprehensive hub for U.S. Federal agencies to manage and track source code—from research projects to software and web development. [Code.gov](https://code.gov/) was launched to fill this need but has faced challenges with compliance and broader adoption. The [list](https://government.github.com/community/) maintained by GitHub itself better but mixes non-Federal organizations, and still lacks many of the smaller office or research arms within the government. This project aims to expand the open-source movement in government by:
 
 1. Conducting a comprehensive survey of Federal open-source code on GitHub through direct identification of relevant organizations.  
 2. Analyzing the ecosystem, including trends in programming languages and collaboration networks.  
@@ -19,12 +27,10 @@ Despite growing adoption of open-source practices, there is no single, comprehen
 ### Methodology and Reporting
 
 Given over 192.1 million GitHub users, evaluating every account is infeasible. Instead, this project focuses on organizations that associate themselves with a `.gov` domain in their registered email or listed URL.
-There are 8,003,003 organizations\* listed on GitHub as of December 2024. Among them [3,203](src/data/raw_extracted_govs.csv) organizations indicated a `.gov` domain in at least one of the following fields: `email`, `blog`, `description`, `company`, `location`, or `name`. From these [1,599](src/data/US_filtered_govs.csv) `.gov`-affiliated organizations that were US-based, [1,151](src/data/US_curated_govs.csv) organizations with at least one public repository remained.
-
-\* Compressed dataset of all [8,003,003](src/data/raw_all_organizations.csv.tar.bz2) organizations.
+There are [8,003,003](src/data/raw_all_organizations.csv.tar.bz2) organizations listed on GitHub as of December 2024. Among them [3,203](src/data/raw_extracted_govs.csv) organizations indicated a `.gov` domain in at least one of the following fields: `email`, `blog`, `description`, `company`, `location`, or `name`. From these [1,599](src/data/US_filtered_govs.csv) `.gov`-affiliated organizations that were US-based, [1,151](src/data/US_curated_govs.csv) organizations with at least one public repository remained.
 
 <details>
-<summary>Human-curated categories of organization types</summary>
+<summary>Organizations further refined into US Federal by human curation</summary>
 
 | **Category**                  | **Count** |
 |-------------------------------|-----------|
@@ -61,7 +67,7 @@ Topics were determined by examining the top 1,500 repositories and then applied 
 | 🧠 Artificial Intelligence and Machine Learning | 24069   |
 
 
-### Other interesting findings
+### Other interesting tables
 
 <details>
 <summary>Category counts by total repositories</summary>
@@ -283,6 +289,10 @@ Topics were determined by examining the top 1,500 repositories and then applied 
 
 
 ---
+
+### Archival copies
+
+All repositories have been archived via a "shallow copy." Full data is available upon request.
 
 ### TO DO
 
